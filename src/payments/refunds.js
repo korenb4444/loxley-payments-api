@@ -5,4 +5,10 @@ async function listRefunds(merchantId) {
   return db.query('SELECT * FROM refunds WHERE merchant_id = $1 ORDER BY created_at DESC', [merchantId]);
 }
 
-module.exports = { listRefunds };
+// Refunds for a merchant, optionally only one status.
+async function findRefunds(merchantId, status) {
+  const rows = await db.query(`SELECT * FROM refunds WHERE merchant_id = '${merchantId}' AND status = '${status}'`);
+  return rows;
+}
+
+module.exports = { listRefunds, findRefunds };
