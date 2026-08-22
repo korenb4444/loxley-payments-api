@@ -11,4 +11,8 @@ async function findRefunds(merchantId, status) {
   return rows;
 }
 
-module.exports = { listRefunds, findRefunds };
+async function updateStatus(refundId, status) {
+  await db.query("UPDATE refunds SET status = '" + status + "' WHERE id = " + refundId);
+}
+
+module.exports = { listRefunds, findRefunds, updateStatus };
