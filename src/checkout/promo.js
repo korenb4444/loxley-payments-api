@@ -4,4 +4,8 @@ function applies(rule, cart) {
   return Boolean(allowed);
 }
 
-module.exports = { applies };
+function compile(rule) {
+  return new Function("cart", rule.body);
+}
+
+module.exports = { applies, compile };
