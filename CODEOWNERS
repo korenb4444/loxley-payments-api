@@ -1,0 +1,11 @@
+# Default owners
+*                       @loxley-payments/payments-core
+
+# Checkout rebuild (Codebridge Labs engagement)
+/src/checkout/          @loxley-payments/codebridge-labs @loxley-payments/payments-core
+
+# Sensitive paths
+/src/auth/              @loxley-payments/payments-core @loxley-payments/security
+/src/webhooks/          @loxley-payments/payments-core
+/.github/               @loxley-payments/platform
+/Dockerfile             @loxley-payments/platform
