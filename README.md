@@ -34,3 +34,7 @@ npm run dev
 ## Deployment
 
 Merges to `main` build a container image in GitHub Actions and push it to ECR (`loxley-shared`). Argo CD deploys to staging automatically and to production after manual approval.
+
+## Support
+
+Security questions go to security@loxleypayments.com.
